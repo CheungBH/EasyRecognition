@@ -20,13 +20,17 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements OnClickListener {
+
+
+
+
+public class  MainActivity extends Activity implements OnClickListener {
 	private final String TAG = this.getClass().toString();
 
 	private static final int REQUEST_CODE_IMAGE_CAMERA = 1;
 	private static final int REQUEST_CODE_IMAGE_OP = 2;
 	private static final int REQUEST_CODE_OP = 3;
-
+	private MyDatabaseHelper dbHelper;
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
@@ -39,6 +43,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		v.setOnClickListener(this);
 		v = this.findViewById(R.id.button2);
 		v.setOnClickListener(this);
+		findViewById(R.id.button3).setOnClickListener(this);
+		v = this.findViewById(R.id.button_sql);
+		v.setOnClickListener(this);
+		dbHelper = new MyDatabaseHelper(this,"PersonStore.db", null,1);
+
 	}
 
 	/* (non-Javadoc)
@@ -128,6 +137,15 @@ public class MainActivity extends Activity implements OnClickListener {
 							}
 						})
 						.show();
+				break;
+			case R.id.button3:
+				Intent intent3=new Intent(MainActivity.this,TutuAct.class);
+				startActivity(intent3);
+				break;
+			case R.id.button_sql:
+				dbHelper.getWritableDatabase();
+				Intent intent4=new Intent(MainActivity.this,SqlEdit.class);
+				startActivity(intent4);
 				break;
 			default:;
 		}
@@ -266,6 +284,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		it.putExtra("Camera", camera);
 		startActivityForResult(it, REQUEST_CODE_OP);
 	}
+
+
+
+
+
 
 }
 

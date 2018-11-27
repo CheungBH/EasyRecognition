@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '28.0.3'
+//    compileSdkVersion 24
+//    buildToolsVersion '28.0.3'
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.arcsoft.sdk_demo"
-        minSdkVersion 21
-        targetSdkVersion 24
+        minSdkVersion 19
+//        targetSdkVersion 24
         versionCode 1
         versionName "1.1"
         sourceSets.main {
@@ -15,18 +17,25 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation files('libs/facedetection.jar')
-    implementation files('libs/facerecognition.jar')
-    implementation files('libs/facetracking.jar')
-    implementation files('libs/ageestimation.jar')
-    implementation files('libs/genderestimation.jar')
-    implementation 'com.guo.android_extend:android-extend:1.0.6'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/facedetection.jar')
+    compile files('libs/facerecognition.jar')
+    compile files('libs/facetracking.jar')
+    compile files('libs/ageestimation.jar')
+    compile files('libs/genderestimation.jar')
+    compile 'com.guo.android_extend:android-extend:1.0.6'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.yanzhenjie:album:1.0.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+
 }

@@ -29,12 +29,12 @@ import java.util.Map;
 public class FaceDB {
 	private final String TAG = this.getClass().toString();
 
-	public static String appid = "xxx";
-	public static String ft_key = "xxx";
-	public static String fd_key = "xxx";
-	public static String fr_key = "xxx";
-	public static String age_key = "xxx";
-	public static String gender_key = "xxx";
+	public static String appid = "EkPhTdA1UkKVo9LtZZ1otcnCP4MS6wWEmEXpFAxFQmXL";
+	public static String ft_key = "3cZ9fa2YtFuQi1Zc62kGnxeNy9QfvBAPoxSAB9sRsvKi";
+	public static String fd_key = "3cZ9fa2YtFuQi1Zc62kGnxeW8YfqQVcVvySNR9MCrH1x";
+	public static String fr_key = "3cZ9fa2YtFuQi1Zc62kGnxezn9iVJXgt3pZ3RW1CWRww";
+	public static String age_key = "3cZ9fa2YtFuQi1Zc62kGnxfF6xEqqzXGQUdLWWXsHC8B";
+	public static String gender_key = "3cZ9fa2YtFuQi1Zc62kGnxfNGMW3YuvvQgHVvX3s9F3s";
 
 	String mDBPath;
 	List<FaceRegist> mRegister;
