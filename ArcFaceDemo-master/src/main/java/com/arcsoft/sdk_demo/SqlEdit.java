@@ -24,6 +24,9 @@ public class SqlEdit extends Activity {
         final EditText tv1 = (EditText)findViewById(R.id.name_input);
         final EditText tv2 = (EditText)findViewById(R.id.content_input);
         final EditText tv3 = (EditText)findViewById(R.id.name_query);
+        final EditText tv4 = (EditText)findViewById(R.id.name_delete);
+
+
 
         Button addData = (Button)findViewById(R.id.button_add);
         addData.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +53,12 @@ public class SqlEdit extends Activity {
                 db.insert("Person",null,values);
                 values.clear();
                 Toast.makeText(SqlEdit.this,"ADD SQL",Toast.LENGTH_SHORT).show();
+                if(tv1!=null){
+                    tv1.getText().clear();
+                }
+                if(tv2!=null){
+                    tv2.getText().clear();
+                }
             }
         });
 
@@ -66,6 +75,12 @@ public class SqlEdit extends Activity {
                 values.clear();
                 Log.d("SqlEdit","更改成功" );
                 Toast.makeText(SqlEdit.this,"CHANGE SQL",Toast.LENGTH_SHORT).show();
+                if(tv1!=null){
+                    tv1.getText().clear();
+                }
+                if(tv2!=null){
+                    tv2.getText().clear();
+                }
             }
         });
 
@@ -74,10 +89,14 @@ public class SqlEdit extends Activity {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                String itemdelete = tv1.getText().toString();
+                String itemdelete = tv4.getText().toString();
                 Log.d("SqlEdit",itemdelete);
                 db.delete("Person","name = ?",new String[]{itemdelete});
                 Toast.makeText(SqlEdit.this,"DELETE",Toast.LENGTH_SHORT).show();
+                if(tv4!=null){
+                    tv4.getText().clear();
+                }
+
             }
         });
 
@@ -124,6 +143,10 @@ public class SqlEdit extends Activity {
                 }
                 else {
                     Toast.makeText(SqlEdit.this,"查询失败，数据不存在",Toast.LENGTH_SHORT).show();
+                }
+
+                if(tv3!=null){
+                    tv3.getText().clear();
                 }
 
                 cursor.close();

@@ -3,68 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/sql_background"
     tools:context=".SqlEdit">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
+    <include layout="@layout/title"/>
 
         <EditText
             android:id="@+id/name_query"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:layout_weight="1"
+
             android:hint="输入查询名字"/>
 
         <Button
             android:id="@+id/button_query"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+
             android:text="查询" />
 
-    </LinearLayout>
+    <include layout="@layout/blank"/>
+    <include layout="@layout/blank"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+
+
 
         <EditText
             android:id="@+id/name_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="请输入名字"
-            android:maxLines="1"/>
+            android:maxLines="1" />
 
         <Button
             android:id="@+id/button_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="添加"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="添加" />
 
         <Button
             android:id="@+id/button_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="更新"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/button_delete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="删除"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="更新" />
 
 
 
     </LinearLayout>
+
 
     <EditText
         android:id="@+id/content_input"
@@ -72,7 +70,27 @@
         android:layout_height="wrap_content"
         android:hint="输入内容"
         android:inputType="textMultiLine"
+        android:minLines="5"
          />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入名字"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删除" />
+    </LinearLayout>
 
 
 

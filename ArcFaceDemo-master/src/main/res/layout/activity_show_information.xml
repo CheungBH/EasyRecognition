@@ -5,39 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/info_background"
     tools:context=".ShowInformation">
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="#000000"
-        android:text="姓名：" />
 
     <TextView
         android:id="@+id/show_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:typeface="serif"
+        android:textSize="24dp"
         android:layout_gravity="center"
         android:text="" />
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="#000000"
-        android:text="内容：" />
 
     <TextView
         android:id="@+id/show_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:typeface="serif"
+        android:textColor="#ffffff"
         android:text="" />
 
 </LinearLayout>
