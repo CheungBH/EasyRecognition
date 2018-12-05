@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_weight="0"
-        android:text="SQL"
+        android:text="信息检索"
         android:textSize="21sp"
         android:textStyle="bold"
         android:typeface="serif" />

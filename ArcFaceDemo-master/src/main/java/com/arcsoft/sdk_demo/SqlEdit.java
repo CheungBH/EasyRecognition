@@ -52,7 +52,7 @@ public class SqlEdit extends Activity {
                 values.put("content",content);
                 db.insert("Person",null,values);
                 values.clear();
-                Toast.makeText(SqlEdit.this,"ADD SQL",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SqlEdit.this,"ADD SUCCESSFULLY",Toast.LENGTH_SHORT).show();
                 if(tv1!=null){
                     tv1.getText().clear();
                 }
